@@ -1,5 +1,31 @@
-good evening
-i have created the git file to check pull command 
-i wnat test git hub in vs code
-new line added
-again added new commit
+pipeline {
+    agent any
+
+    stages {
+        stage("server Details") {
+            steps {
+                echo "Server Details"
+            }
+        }
+        stage("CPU Deatails") {
+            steps {
+                sh "lscpu"
+            }
+        }
+        stage("Memory Deatails") {
+            steps {
+                sh "free -h"
+            }
+        }
+        stage("Disk Details") {
+            steps {
+                sh "df -h"
+            }
+        }
+        stage("Network Details") {
+            steps {
+                sh "ifconfig"
+            }
+        }
+    }
+}
