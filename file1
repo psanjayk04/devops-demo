@@ -17,10 +17,5 @@ pipeline {
                 sh "free -h"
             }
         }
-        stage("Disk Details") {
-            steps {
-                sh "df -h"
-            }
-        }
     }
 }
