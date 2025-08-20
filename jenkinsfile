@@ -27,10 +27,5 @@ pipeline {
                 sh "ifconfig"
             }
         }
-        stage("ip Address") {
-            steps { 
-                sh "hostname -I"
-            }
-        }
     }
 }
