@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("server Details") {
+            steps {
+                echo "Server Details"
+            }
+        }
+        stage("CPU Deatails") {
+            steps {
+                sh "lscpu"
+            }
+        }
+        stage("Memory Deatails") {
+            steps {
+                sh "free -h"
+            }
+        }
+        stage("Disk Details") {
+            steps {
+                sh "df -h"
+            }
+        }
+        stage("Network Details") {
+            steps {
+                sh "ifconfig"
+            }
+        }
+        stage("ip Address") {
+            steps { 
+                sh "hostname -I"
+            }
+        }
+    }
+}
