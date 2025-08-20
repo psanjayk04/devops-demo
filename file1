@@ -22,10 +22,5 @@ pipeline {
                 sh "df -h"
             }
         }
-        stage("Network Details") {
-            steps {
-                sh "ifconfig"
-            }
-        }
     }
 }
